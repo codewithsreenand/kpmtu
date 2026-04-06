@@ -17,6 +17,7 @@ function renderDistrict() {
   const name = district.name[document.documentElement.lang] || district.name.en;
   const members = district.committee || [];
   const activities = district.activities || [];
+  const gallery = district.gallery || [];
 
   const html = [];
   html.push(`<h2 class="section-title">${name}</h2>`);
@@ -48,6 +49,21 @@ function renderDistrict() {
             .join("")}</ul>`
         : `<p class="text-muted">${t("placeholder_activity")}</p>`}
     </div>`);
+
+  if (gallery.length > 0) {
+    html.push(`<div style="margin-top:2.5rem;">
+      <h3 class="section-title" style="font-size:1.2rem;">${document.documentElement.lang === 'ml' ? 'ചിത്രശാല' : 'Gallery'}</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.2rem; margin-top:1.5rem;">
+        ${gallery.map(img => `
+          <div style="border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/3; background: var(--surface);">
+            <img src="${img}" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" alt="District Event Photo" 
+                 onerror="this.src='https://placehold.co/600x400/183c5e/ffffff?text=Pending+Upload'"
+                 onclick="if(this.src.indexOf('placehold.co')===-1) window.open(this.src, '_blank')">
+          </div>
+        `).join("")}
+      </div>
+    </div>`);
+  }
 
   container.innerHTML = html.join("");
 }

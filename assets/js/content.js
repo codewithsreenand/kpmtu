@@ -78,6 +78,32 @@ window.KPMTU_DATA = {
     { id: "kozhikode", name: { en: "Kozhikode", ml: "കോഴിക്കോട്" }, contact: { phone: "8590982815", email: "kozhikode@kmptu.com", address: "Kozhikode District Office, Kerala" }, committee: [], activities: [] },
     { id: "wayanad", name: { en: "Wayanad", ml: "വയനാട്" }, contact: { phone: "8590982815", email: "wayanad@kmptu.com", address: "Wayanad District Office, Kerala" }, committee: [], activities: [] },
     { id: "kannur", name: { en: "Kannur", ml: "കണ്ണൂര്‍" }, contact: { phone: "8590982815", email: "kannur@kmptu.com", address: "Kannur District Office, Kerala" }, committee: [], activities: [] },
-    { id: "kasaragod", name: { en: "Kasaragod", ml: "കാസർകോട്" }, contact: { phone: "8590982815", email: "kasaragod@kmptu.com", address: "Kasaragod District Office, Kerala" }, committee: [], activities: [] },
-  ],
+    {
+      id: "kasaragod",
+      name: { en: "Kasaragod", ml: "കാസർകോട്" },
+      contact: {
+        phone: "8590982815",
+        email: "kasaragod@kmptu.com",
+        address: "Kasaragod District Office, Kerala",
+      },
+      committee: [
+        { name: { en: "Suprabha M", ml: "സുപ്രഭ എം" }, role: { en: "President", ml: "പ്രസിഡൻ്റ്" } },
+        { name: { en: "Aslam B S", ml: "അസ്‌ലം ബി എസ്" }, role: { en: "General Secretary", ml: "ജനറൽ സെക്രട്ടറി" } },
+        { name: { en: "Vivekanand S", ml: "വിവേകാനന്ദ് എസ്" }, role: { en: "Treasurer", ml: "ട്രഷറർ" } },
+        { name: { en: "Hafiz V", ml: "ഹാഫിസ് വി" }, role: { en: "Vice President", ml: "വൈസ് പ്രസിഡൻ്റ്" } },
+        { name: { en: "Ibrahim Khalil C P", ml: "ഇബ്രാഹിം ഖലീൽ സി പി" }, role: { en: "Vice President", ml: "വൈസ് പ്രസിഡൻ്റ്" } },
+        { name: { en: "Sunil Kumar K", ml: "സുനിൽ കുമാർ കെ" }, role: { en: "Joint Secretary", ml: "ജോ. സെക്രട്ടറി" } },
+        { name: { en: "Fathimath Soujana", ml: "ഫാത്തിമത്ത് സൗജാന" }, role: { en: "Joint Secretary", ml: "ജോ. സെക്രട്ടറി" } }
+      ],
+      activities: [
+        { en: "First Kasaragod District Convention held on 2025 April 27 at Swarna Mahal, Kasaragod", ml: "പ്രഥമ കാസർഗോഡ് ജില്ലാ കൺവെൻഷൻ (2025 ഏപ്രിൽ 27, സ്വർണ്ണമഹൽ, കാസർഗോഡ്)" }
+      ],
+      gallery: [
+        "assets/images/districts/kasaragod/kasaragod-conv-1.jpg",
+        "assets/images/districts/kasaragod/kasaragod-conv-2.jpg",
+        "assets/images/districts/kasaragod/kasaragod-conv-3.jpg",
+        "assets/images/districts/kasaragod/kasaragod-conv-4.jpg",
+        "assets/images/districts/kasaragod/kasaragod-comm.jpg"
+      ]
+    },  ],
 };
