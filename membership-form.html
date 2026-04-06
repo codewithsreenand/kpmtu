@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Form – KPMTU</title>
+    <meta name="description" content="Apply for membership in KPMTU." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
+    <script src="assets/js/membership-form.js" defer></script>
+  </head>
+  <body data-page="membership-form">
+    <header id="main-header"></header>
+
+    <main>
+      <section class="container">
+        <h1 class="section-title" data-i18n="form_title"></h1>
+        <p class="section-subtitle" data-i18n="form_instruction"></p>
+
+        <div id="form-success" class="alert" style="display:none; margin-top:1.5rem;">
+          <strong></strong>
+          <span></span>
+        </div>
+
+        <form id="membership-form" style="margin-top: 1.5rem; display: grid; gap: 1.5rem;">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name" data-i18n="form_name"></label>
+                <input id="name" name="name" class="input" placeholder="" required />
+            </div>
+            <div class="form-field">
+              <label for="parentName" data-i18n="form_parent_name"></label>
+                <input id="parentName" name="parentName" class="input" placeholder="" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="dob" data-i18n="form_dob"></label>
+              <input id="dob" name="dob" type="date" class="input" placeholder="" required />
+            </div>
+            <div class="form-field">
+              <label for="blood" data-i18n="form_blood"></label>
+              <input id="blood" name="blood" class="input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="permanentAddress" data-i18n="form_permanent_address"></label>
+            <textarea id="permanentAddress" name="permanentAddress" class="textarea" placeholder="" required></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="communicationAddress" data-i18n="form_communication_address"></label>
+            <textarea id="communicationAddress" name="communicationAddress" class="textarea" placeholder=""></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone" data-i18n="form_phone"></label>
+              <input id="phone" name="phone" type="tel" class="input" placeholder="" required />
+            </div>
+            <div class="form-field">
+              <label for="whatsapp" data-i18n="form_whatsapp"></label>
+              <input id="whatsapp" name="whatsapp" type="tel" class="input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email" data-i18n="form_email"></label>
+              <input id="email" name="email" type="email" class="input" placeholder="" />
+            </div>
+            <div class="form-field">
+              <label for="aadhaar" data-i18n="form_aadhaar"></label>
+              <input id="aadhaar" name="aadhaar" type="text" class="input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="academic" data-i18n="form_academic"></label>
+              <input id="academic" name="academic" class="input" placeholder="" />
+            </div>
+            <div class="form-field">
+              <label for="professional" data-i18n="form_professional"></label>
+              <input id="professional" name="professional" class="input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="institute" data-i18n="form_institute"></label>
+            <input id="institute" name="institute" class="input" placeholder="" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="experience" data-i18n="form_experience"></label>
+              <input id="experience" name="experience" class="input" placeholder="" />
+            </div>
+            <div class="form-field">
+              <label for="area" data-i18n="form_area"></label>
+              <input id="area" name="area" class="input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="district" data-i18n="form_district"></label>
+              <select id="district" name="district" class="select" required>
+                <option value="" disabled selected data-i18n="form_district_placeholder">--</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="introducedBy" data-i18n="form_introduced_by"></label>
+              <input id="introducedBy" name="introducedBy" class="input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="photo" data-i18n="form_photo"></label>
+            <input id="photo" name="photo" type="file" class="input" accept="image/*" />
+          </div>
+
+          <div class="checkbox-field">
+            <input id="declaration" name="declaration" type="checkbox" required />
+            <label for="declaration" data-i18n="form_declaration"></label>
+          </div>
+
+          <div>
+            <button type="submit" class="btn btn-primary" data-i18n="form_submit"></button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer container" style="display: flex; flex-direction: column; gap: 2rem; padding-top: 3rem; padding-bottom: 3rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div>
+          <div style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600;" data-i18n="footer_text"></div>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.2rem;" data-i18n="footer_quick_links"></h3>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><a href="about.html" data-i18n="nav_about" style="text-decoration: none; color: inherit;"></a></li>
+            <li><a href="leadership.html" data-i18n="nav_leadership" style="text-decoration: none; color: inherit;"></a></li>
+            <li><a href="membership.html" data-i18n="nav_membership" style="text-decoration: none; color: inherit;"></a></li>
+            <li><a href="contact.html" data-i18n="nav_contact" style="text-decoration: none; color: inherit;"></a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.2rem;" data-i18n="nav_contact"></h3>
+          <div data-i18n="footer_contact_address" style="line-height: 1.6;"></div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #eaeaea; padding-top: 2rem; font-size: 0.9rem; color: #666;">
+        <p data-i18n="footer_note"></p>
+      </div>
+    </footer>
+  </body>
+</html>
