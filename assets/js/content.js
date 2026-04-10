@@ -69,15 +69,72 @@ window.KPMTU_DATA = {
       ],
       activities: [],
     },
+    { id: "pathanamthitta", name: { en: "Pathanamthitta", ml: "പത്തനംതിട്ട" }, contact: { phone: "8590982815", email: "pathanamthitta@kmptu.com", address: "Pathanamthitta District Office, Kerala" }, committee: [], activities: [] },
     { id: "ernakulam", name: { en: "Ernakulam", ml: "എറണാകുളം" }, contact: { phone: "8590982815", email: "ernakulam@kmptu.com", address: "Ernakulam District Office, Kerala" }, committee: [], activities: [] },
     { id: "kottayam", name: { en: "Kottayam", ml: "കോട്ടയം" }, contact: { phone: "8590982815", email: "kottayam@kmptu.com", address: "Kottayam District Office, Kerala" }, committee: [], activities: [] },
     { id: "idukki", name: { en: "Idukki", ml: "ഇടുക്കി" }, contact: { phone: "8590982815", email: "idukki@kmptu.com", address: "Idukki District Office, Kerala" }, committee: [], activities: [] },
     { id: "thrissur", name: { en: "Thrissur", ml: "തൃശൂർ" }, contact: { phone: "8590982815", email: "thrissur@kmptu.com", address: "Thrissur District Office, Kerala" }, committee: [], activities: [] },
     { id: "palakkad", name: { en: "Palakkad", ml: "പാലക്കാട്" }, contact: { phone: "8590982815", email: "palakkad@kmptu.com", address: "Palakkad District Office, Kerala" }, committee: [], activities: [] },
-    { id: "malappuram", name: { en: "Malappuram", ml: "മലപ്പുറം" }, contact: { phone: "8590982815", email: "malappuram@kmptu.com", address: "Malappuram District Office, Kerala" }, committee: [], activities: [] },
+    { 
+      id: "malappuram", 
+      name: { en: "Malappuram", ml: "മലപ്പുറം" }, 
+      contact: { phone: "8590982815", email: "malappuram@kmptu.com", address: "Malappuram District Office, Kerala" }, 
+      committee: [], 
+      activities: [
+        { en: "First Malappuram District Convention", ml: "പ്രഥമ മലപ്പുറം ജില്ലാ കൺവെൻഷൻ" }
+      ],
+      gallery: [
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.12.14.jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.14.27.jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.16.55.jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.17.22.jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.43.37.jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.55.14.jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.55.15.jpeg"
+      ]
+    },
     { id: "kozhikode", name: { en: "Kozhikode", ml: "കോഴിക്കോട്" }, contact: { phone: "8590982815", email: "kozhikode@kmptu.com", address: "Kozhikode District Office, Kerala" }, committee: [], activities: [] },
-    { id: "wayanad", name: { en: "Wayanad", ml: "വയനാട്" }, contact: { phone: "8590982815", email: "wayanad@kmptu.com", address: "Wayanad District Office, Kerala" }, committee: [], activities: [] },
-    { id: "kannur", name: { en: "Kannur", ml: "കണ്ണൂര്‍" }, contact: { phone: "8590982815", email: "kannur@kmptu.com", address: "Kannur District Office, Kerala" }, committee: [], activities: [] },
+    { 
+      id: "wayanad", 
+      name: { en: "Wayanad", ml: "വയനാട്" }, 
+      contact: { phone: "8590982815", email: "wayanad@kmptu.com", address: "Wayanad District Office, Kerala" }, 
+      committee: [], 
+      activities: [
+        { en: "First Wayanad District Convention", ml: "പ്രഥമ വയനാട് ജില്ലാ കൺവെൻഷൻ" }
+      ],
+      gallery: [
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.14.51 (1).jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.14.51.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.14.52 (1).jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.14.52.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.15.41.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.46.52.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.55.00.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 19.56.05.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 20.00.20.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 20.00.33.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-06 at 22.23.28.jpeg",
+        "assets/images/districts/wayanad/WhatsApp Image 2026-04-07 at 13.07.47.jpeg"
+      ]
+    },
+    { 
+      id: "kannur", 
+      name: { en: "Kannur", ml: "കണ്ണൂര്‍" }, 
+      contact: { phone: "8590982815", email: "kannur@kmptu.com", address: "Kannur District Office, Kerala" }, 
+      committee: [], 
+      activities: [
+        { en: "First Kannur District Convention", ml: "പ്രഥമ കണ്ണൂർ ജില്ലാ കൺവെൻഷൻ" }
+      ],
+      gallery: [
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.42.13.jpeg",
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.54.09.jpeg",
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.54.10.jpeg",
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.54.11.jpeg",
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.55.27.jpeg",
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.56.57.jpeg",
+        "assets/images/districts/kannur/WhatsApp Image 2026-04-06 at 18.56.58.jpeg"
+      ]
+    },
     {
       id: "kasaragod",
       name: { en: "Kasaragod", ml: "കാസർകോട്" },
