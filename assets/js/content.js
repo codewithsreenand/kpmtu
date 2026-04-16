@@ -1,24 +1,24 @@
 window.KPMTU_DATA = {
   stateCommittee: [
     {
-      name: { en: "Manoj Kumar", ml: "മനോജ് കുമാർ" },
-      role: { en: "State Coordinator — Kozhikode", ml: "സംസ്ഥാന കോ-ഓർഡിനേറ്റർ — കോഴിക്കോട്" },
-      photo: "assets/images/M.jpg",
+      name: { en: "Manoj", ml: "മനോജ്" },
+      role: { en: "Coordinator — 9846549080", ml: "കോ-ഓർഡിനേറ്റർ — 9846549080" },
+      photo: "assets/images/heads-image/coordinator/2.png",
     },
     {
-      name: { en: "K. Surendran", ml: "കെ. സുരേന്ദ്രൻ" },
-      role: { en: "State President — Kannur", ml: "സംസ്ഥാന പ്രസിഡന്റ് — കണ്ണൂർ" },
-      photo: "assets/images/K.jpg",
+      name: { en: "Surendran", ml: "സുരേന്ദ്രൻ" },
+      role: { en: "President — 8848636002", ml: "പ്രസിഡന്റ് — 8848636002" },
+      photo: "assets/images/heads-image/president/3.png",
     },
     {
-      name: { en: "Abuyazar K.P.", ml: "അബൂയസർ കെ.പി." },
-      role: { en: "General Secretary — Kasaragod", ml: "ജനറൽ സെക്രട്ടറി — കാസർകോട്" },
-      photo: "assets/images/A.jpg",
+      name: { en: "Abuyazar KP", ml: "അബൂയസർ കെ.പി." },
+      role: { en: "General Secretary — 9744636363", ml: "ജനറൽ സെക്രട്ടറി — 9744636363" },
+      photo: "assets/images/heads-image/general secretary/4.png",
     },
     {
       name: { en: "Sukumari", ml: "സുകുമാരി" },
-      role: { en: "State Treasurer — Kozhikode", ml: "സംസ്ഥാന ട്രഷറർ — കോഴിക്കോട്" },
-      photo: "assets/images/S.jpg",
+      role: { en: "Treasurer — 9847394687", ml: "ട്രഷറർ — 9847394687" },
+      photo: "assets/images/heads-image/tresurer/5.png",
     },
   ],
   districts: [
@@ -69,11 +69,42 @@ window.KPMTU_DATA = {
       ],
       activities: [],
     },
-    { id: "pathanamthitta", name: { en: "Pathanamthitta", ml: "പത്തനംതിട്ട" }, contact: { phone: "8590982815", email: "pathanamthitta@kmptu.com", address: "Pathanamthitta District Office, Kerala" }, committee: [], activities: [] },
+    { 
+      id: "pathanamthitta", 
+      name: { en: "Pathanamthitta", ml: "പത്തനംതിട്ട" }, 
+      contact: { phone: "8590982815", email: "pathanamthitta@kmptu.com", address: "Pathanamthitta District Office, Kerala" }, 
+      committee: [], 
+      activities: [
+        { en: "First Pathanamthitta District Convention", ml: "പ്രഥമ പത്തനംതിട്ട ജില്ലാ കൺവെൻഷൻ" }
+      ],
+      gallery: [
+        "assets/images/districts/pathanamthitta/WhatsApp Image 2026-04-16 at 17.33.59.jpeg",
+        "assets/images/districts/pathanamthitta/WhatsApp Image 2026-04-16 at 17.34.44.jpeg",
+        "assets/images/districts/pathanamthitta/WhatsApp Image 2026-04-16 at 17.35.50.jpeg",
+        "assets/images/districts/pathanamthitta/WhatsApp Image 2026-04-16 at 17.36.10.jpeg"
+      ]
+    },
     { id: "ernakulam", name: { en: "Ernakulam", ml: "എറണാകുളം" }, contact: { phone: "8590982815", email: "ernakulam@kmptu.com", address: "Ernakulam District Office, Kerala" }, committee: [], activities: [] },
     { id: "kottayam", name: { en: "Kottayam", ml: "കോട്ടയം" }, contact: { phone: "8590982815", email: "kottayam@kmptu.com", address: "Kottayam District Office, Kerala" }, committee: [], activities: [] },
     { id: "idukki", name: { en: "Idukki", ml: "ഇടുക്കി" }, contact: { phone: "8590982815", email: "idukki@kmptu.com", address: "Idukki District Office, Kerala" }, committee: [], activities: [] },
-    { id: "thrissur", name: { en: "Thrissur", ml: "തൃശൂർ" }, contact: { phone: "8590982815", email: "thrissur@kmptu.com", address: "Thrissur District Office, Kerala" }, committee: [], activities: [] },
+    { 
+      id: "thrissur", 
+      name: { en: "Thrissur", ml: "തൃശൂർ" }, 
+      contact: { phone: "8590982815", email: "thrissur@kmptu.com", address: "Thrissur District Office, Kerala" }, 
+      committee: [], 
+      activities: [
+        { en: "First Thrissur District Convention", ml: "പ്രഥമ തൃശൂർ ജില്ലാ കൺവെൻഷൻ" }
+      ],
+      gallery: [
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.25.35.jpeg",
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.25.36.jpeg",
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.26.43 (1).jpeg",
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.26.43.jpeg",
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.27.49.jpeg",
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.29.03.jpeg",
+        "assets/images/districts/thrissur/WhatsApp Image 2026-04-16 at 17.29.24.jpeg"
+      ]
+    },
     { id: "palakkad", name: { en: "Palakkad", ml: "പാലക്കാട്" }, contact: { phone: "8590982815", email: "palakkad@kmptu.com", address: "Palakkad District Office, Kerala" }, committee: [], activities: [] },
     { 
       id: "malappuram", 
