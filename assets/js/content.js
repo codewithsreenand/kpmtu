@@ -1,24 +1,54 @@
 window.KPMTU_DATA = {
   stateCommittee: [
     {
-      name: { en: "Manoj", ml: "മനോജ്" },
+      name: { en: "Manoj Kumar Kozhikode", ml: "മനോജ് കുമാർ കോഴിക്കോട്" },
       role: { en: "Coordinator — 9846549080", ml: "കോ-ഓർഡിനേറ്റർ — 9846549080" },
       photo: "assets/images/heads-image/coordinator/2.png",
     },
     {
-      name: { en: "Surendran", ml: "സുരേന്ദ്രൻ" },
+      name: { en: "K Surendran Kannur", ml: "കെ സുരേന്ദ്രൻ കണ്ണൂർ" },
       role: { en: "President — 8848636002", ml: "പ്രസിഡന്റ് — 8848636002" },
       photo: "assets/images/heads-image/president/3.png",
     },
     {
-      name: { en: "Abuyazar KP", ml: "അബൂയസർ കെ.പി." },
+      name: { en: "Abuyazar K P Kasaragod", ml: "അബൂയസർ കെ പി കാസർഗോഡ്" },
       role: { en: "General Secretary — 9744636363", ml: "ജനറൽ സെക്രട്ടറി — 9744636363" },
       photo: "assets/images/heads-image/general secretary/4.png",
     },
     {
-      name: { en: "Sukumari", ml: "സുകുമാരി" },
+      name: { en: "Sukumari Kozhikode", ml: "സുകുമാരി കോഴിക്കോട്" },
       role: { en: "Treasurer — 9847394687", ml: "ട്രഷറർ — 9847394687" },
       photo: "assets/images/heads-image/tresurer/5.png",
+    },
+    {
+      name: { en: "Lissy Jose Pathanamthitta", ml: "ലിസ്സി ജോസ് പത്തനംതിട്ട" },
+      role: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+      photo: "assets/images/heads-image/vice-president/lissy.png",
+    },
+    {
+      name: { en: "Saji Antony Kannur", ml: "സജി ആന്റണി കണ്ണൂർ" },
+      role: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+      photo: "assets/images/heads-image/vice-president/saji.png",
+    },
+    {
+      name: { en: "Sakeer Ali Malappuram", ml: "സക്കീർ അലി മലപ്പുറം" },
+      role: { en: "Vice President", ml: "വൈസ് പ്രസിഡന്റ്" },
+      photo: "assets/images/heads-image/vice-president/sakeer.png",
+    },
+    {
+      name: { en: "Naseer Thrissur", ml: "നസീർ തൃശ്ശൂർ" },
+      role: { en: "Joint Secretary", ml: "ജോ. സെക്രട്ടറി" },
+      photo: "assets/images/heads-image/joint-secretary/naseer.png",
+    },
+    {
+      name: { en: "Pramod Vadakara", ml: "പ്രമോദ് വടകര" },
+      role: { en: "Joint Secretary", ml: "ജോ. സെക്രട്ടറി" },
+      photo: "assets/images/heads-image/joint-secretary/pramod.png",
+    },
+    {
+      name: { en: "Nabeel K V Thamarassery", ml: "നബീൽ കെ വി താമരശ്ശേരി" },
+      role: { en: "Joint Secretary", ml: "ജോ. സെക്രട്ടറി" },
+      photo: "assets/images/heads-image/joint-secretary/nabeel.png",
     },
   ],
   districts: [

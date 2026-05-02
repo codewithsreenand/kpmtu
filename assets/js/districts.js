@@ -20,13 +20,25 @@ function renderDistrictList() {
     imgWrapper.style.backgroundColor = "var(--bg-alt)";
     
     const img = document.createElement("img");
-    const pSeed = district.id.charCodeAt(0) + district.id.length; 
-    img.src = `https://loremflickr.com/400/250/kerala,landscape?lock=${pSeed}`;
+    // Prioritize: 1. Gallery first image, 2. District-ID-based image, 3. Logo fallback
+    let posterSrc = "assets/images/logo.jpeg";
+    if (district.gallery && district.gallery.length > 0) {
+      posterSrc = district.gallery[0];
+    } else {
+      posterSrc = `assets/images/districts/${district.id}.jpg`;
+    }
+
+    img.src = posterSrc;
     img.alt = district.name.en;
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.objectFit = "cover";
     img.loading = "lazy";
+    img.onerror = function() {
+      if (this.src.indexOf("assets/images/logo.jpeg") === -1) {
+        this.src = "assets/images/logo.jpeg";
+      }
+    };
     imgWrapper.appendChild(img);
 
     const contentWrapper = document.createElement("div");
