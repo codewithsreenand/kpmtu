@@ -145,13 +145,9 @@ window.KPMTU_DATA = {
         { en: "First Malappuram District Convention", ml: "പ്രഥമ മലപ്പുറം ജില്ലാ കൺവെൻഷൻ" }
       ],
       gallery: [
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.12.14.jpeg",
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.14.27.jpeg",
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.16.55.jpeg",
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.17.22.jpeg",
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.43.37.jpeg",
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.55.14.jpeg",
-        "assets/images/districts/malapuram/WhatsApp Image 2026-04-06 at 16.55.15.jpeg"
+        "assets/images/districts/malapuram/WhatsApp Image 2026-05-08 at 21.29.57 (1).jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-05-08 at 21.29.57 (2).jpeg",
+        "assets/images/districts/malapuram/WhatsApp Image 2026-05-08 at 21.29.57.jpeg"
       ]
     },
     { id: "kozhikode", name: { en: "Kozhikode", ml: "കോഴിക്കോട്" }, contact: { phone: "8590982815", email: "kozhikode@kmptu.com", address: "Kozhikode District Office, Kerala" }, committee: [], activities: [] },
