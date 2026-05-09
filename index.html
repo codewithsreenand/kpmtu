@@ -17,6 +17,8 @@
 		<script src="assets/js/content.js" defer></script>
 		<script src="assets/js/home.js" defer></script>
 		<script src="assets/js/intro.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+		<script src="assets/js/hero-3d.js" defer></script>
 	</head>
 	<body data-page="home">
 		<!-- INTRO SCREEN -->
@@ -44,18 +46,8 @@
 							<a class="btn btn-glass" href="about.html" data-i18n="hero_cta_about"></a>
 						</div>
 					</div>
-					<div class="hero-visual">
-						<div class="hero-image-wrapper">
-							<div class="hero-slideshow">
-								<img src="assets/images/cover_photos/cover-1.jpg" alt="KPMTU Cover 1" class="slide active" onerror="this.src='https://placehold.co/800x600/183c5e/ffffff?text=Pending+Cover+1'" />
-								<img src="assets/images/cover_photos/cover-2.jpg" alt="KPMTU Cover 2" class="slide" onerror="this.src='https://placehold.co/800x600/002d62/ffffff?text=Pending+Cover+2'" />
-								<img src="assets/images/cover_photos/cover-3.jpg" alt="KPMTU Cover 3" class="slide" onerror="this.src='https://placehold.co/800x600/001a33/ffffff?text=Pending+Cover+3'" />
-							</div>
-							<div class="hero-floating-card">
-								<strong>10,000+</strong>
-								<span data-i18n="districts_preview_title"></span>
-							</div>
-						</div>
+					<div class="hero-visual" id="hero-3d-container">
+						<!-- 3D DNA Helix will be rendered here -->
 					</div>
 				</div>
 			</section>
