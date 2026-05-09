@@ -106,7 +106,7 @@ function renderFooter() {
     <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding: 2rem 0; margin-top: 2rem;">
       <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
         <p data-i18n="footer_note" style="margin: 0; color: rgba(255,255,255,0.5); font-size: 0.95rem;"></p>
-        <p style="margin: 0; color: rgba(255,255,255,0.3); font-size: 0.85rem;">Modern Organization Layout.</p>
+        <p style="margin: 0; color: rgba(255,255,255,0.3); font-size: 0.85rem;">developed by <a href="https://www.codecave.co.in" target="_blank" style="color: inherit; text-decoration: none; font-weight: 500;">codecave</a></p>
       </div>
     </div>
   `;
