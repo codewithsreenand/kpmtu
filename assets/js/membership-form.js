@@ -217,7 +217,7 @@ function initMembershipForm() {
       form.scrollIntoView({ behavior: "smooth" });
 
       setTimeout(() => {
-        window.location.href = "https://chat.whatsapp.com/I9iJH6OPzynIgWqBGnULQ9?mode=gi_t";
+        window.location.href = "https://chat.whatsapp.com/Eqp6HkcKPuZ8hDc06YDLwf";
       }, 2500);
 
     } catch (error) {
