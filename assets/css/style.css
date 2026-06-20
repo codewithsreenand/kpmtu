@@ -835,3 +835,26 @@ section:last-of-type {
   opacity: 0;
   visibility: hidden;
 }
+
+/* DONATION CHIPS STYLE */
+.donation-chip {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+.donation-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--bg-alt);
+}
+.donation-chip.active {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}

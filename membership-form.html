@@ -142,10 +142,41 @@
 
         <!-- PAYMENT MODAL (Hidden by default) -->
         <div id="payment-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center; padding:1rem;">
-          <div style="background:var(--bg); border-radius:var(--radius); padding:2rem; width:100%; max-width:400px; box-shadow:var(--shadow-lg); text-align:center; position:relative;">
+          <div style="background:var(--bg); border-radius:var(--radius); padding:2rem; width:100%; max-width:400px; box-shadow:var(--shadow-lg); text-align:center; position:relative; overflow-y:auto; max-height:90vh;">
             <button type="button" id="close-payment" style="position:absolute; top:1rem; right:1rem; background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:var(--text);">&times;</button>
-            <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">Step 2: Payment</h2>
-            <p style="color:var(--muted); font-size:0.95rem; margin-bottom:1.5rem;">Scan this QR code with any UPI app to pay the membership fee.</p>
+            <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;" data-i18n="payment_title">Step 2: Payment</h2>
+            
+            <!-- Cost Breakdown Section -->
+            <div style="background:var(--bg-alt); border-radius:var(--radius); padding:1rem; margin-bottom:1.5rem; text-align:left; border: 1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.95rem;">
+                <span style="font-weight:500;" data-i18n="payment_reg_fee">Registration Fee</span>
+                <span style="font-weight:600; color:var(--primary);">₹100</span>
+              </div>
+              
+              <div style="margin-top:0.75rem; border-top:1px dashed var(--border); padding-top:0.75rem;">
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.95rem; font-weight:500; cursor:pointer; margin-bottom:0.5rem;">
+                  <input type="checkbox" id="add-donation-chk" style="width:16px; height:16px; cursor:pointer;" />
+                  <span data-i18n="payment_add_donation">Add a Donation (Optional)</span>
+                </label>
+                
+                <div id="donation-options-container" style="display:none; margin-top:0.5rem; animation: introFadeUp 0.3s ease;">
+                  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom:0.5rem;">
+                    <button type="button" class="donation-chip" data-val="50">+₹50</button>
+                    <button type="button" class="donation-chip" data-val="100">+₹100</button>
+                    <button type="button" class="donation-chip" data-val="200">+₹200</button>
+                    <button type="button" class="donation-chip" data-val="500">+₹500</button>
+                  </div>
+                  <input type="number" id="custom-donation-input" class="input" placeholder="Custom Donation Amount (₹)" min="1" data-i18n="payment_custom_donation" style="padding:0.5rem; font-size:0.9rem; margin-top:0.25rem;" />
+                </div>
+              </div>
+              
+              <div style="display:flex; justify-content:space-between; margin-top:0.75rem; border-top:1px solid var(--border); padding-top:0.75rem; font-size:1.1rem; font-weight:700; color:var(--primary);">
+                <span data-i18n="payment_total">Total to Pay</span>
+                <span id="payment-total-amount">₹100</span>
+              </div>
+            </div>
+
+            <p style="color:var(--muted); font-size:0.95rem; margin-bottom:1.5rem;" data-i18n="payment_instruction">Scan this QR code with any UPI app to pay the fee.</p>
             
             <div style="background:#fff; border-radius:12px; padding:1rem; display:inline-block; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
               <img src="assets/images/payment-qr.png" alt="Scan to pay" style="width:200px; height:200px; object-fit:contain; display:block;" />
@@ -154,15 +185,15 @@
             <p style="font-weight:600; margin-bottom:0.5rem; font-size:1.1rem; user-select:all;">kera8590838@barodampay</p>
             
             <div style="margin-bottom:1.5rem;">
-              <a href="upi://pay?pa=kera8590838@barodampay&amp;pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&amp;mc=&amp;tn=Verified%20Merchant&amp;am=&amp;cu=INR&amp;url=&amp;mode=02&amp;orgid=159012&amp;mid=&amp;msid=&amp;mtid=&amp;sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo" class="btn btn-outline" style="display:inline-block; text-decoration:none; width:100%; max-width:200px;">Pay via UPI App</a>
+              <a id="upi-pay-link" href="upi://pay?pa=kera8590838@barodampay&amp;pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&amp;mc=&amp;tn=Verified%20Merchant&amp;am=100&amp;cu=INR&amp;url=&amp;mode=02&amp;orgid=159012&amp;mid=&amp;msid=&amp;mtid=&amp;sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo" class="btn btn-outline" style="display:inline-block; text-decoration:none; width:100%; max-width:200px;" data-i18n="payment_pay_upi">Pay via UPI App</a>
             </div>
             
             <div style="text-align:left;">
-              <label for="paymentScreenshot" style="display:block; font-weight:500; margin-bottom:0.5rem; font-size:0.95rem;">Upload Payment Screenshot</label>
+              <label for="paymentScreenshot" style="display:block; font-weight:500; margin-bottom:0.5rem; font-size:0.95rem;" data-i18n="payment_upload_label">Upload Payment Screenshot</label>
               <input type="file" id="paymentScreenshot" accept="image/*" class="input" style="width:100%;" required />
             </div>
             
-            <button type="button" id="final-submit" class="btn btn-primary" style="width:100%; margin-top:1.5rem; padding:0.8rem;">Complete Registration</button>
+            <button type="button" id="final-submit" class="btn btn-primary" style="width:100%; margin-top:1.5rem; padding:0.8rem;" data-i18n="payment_complete_btn">Complete Registration</button>
           </div>
         </div>
 

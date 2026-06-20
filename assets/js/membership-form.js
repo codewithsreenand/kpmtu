@@ -49,8 +49,98 @@ function initMembershipForm() {
 
   renderDistrictOptions();
 
+  // Donation UI Element configuration
+  const addDonationChk = document.getElementById("add-donation-chk");
+  const donationOptionsContainer = document.getElementById("donation-options-container");
+  const customDonationInput = document.getElementById("custom-donation-input");
+  const paymentTotalAmount = document.getElementById("payment-total-amount");
+  const upiPayLink = document.getElementById("upi-pay-link");
+  const donationChips = document.querySelectorAll(".donation-chip");
+
+  let selectedChipAmount = 0;
+  let customDonationAmount = 0;
+
+  function calculateTotal() {
+    const isDonationEnabled = addDonationChk && addDonationChk.checked;
+    let donation = 0;
+    if (isDonationEnabled) {
+      if (selectedChipAmount > 0) {
+        donation = selectedChipAmount;
+      } else {
+        donation = customDonationAmount;
+      }
+    }
+    const registrationFee = 100;
+    const total = registrationFee + donation;
+
+    // Update UI
+    if (paymentTotalAmount) {
+      paymentTotalAmount.textContent = `₹${total}`;
+    }
+
+    // Update UPI deep link
+    if (upiPayLink) {
+      const baseUri = "upi://pay?pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&mc=&tn=Verified%20Merchant&am=" + total + "&cu=INR&url=&mode=02&orgid=159012&mid=&msid=&mtid=&sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo";
+      upiPayLink.href = baseUri;
+    }
+
+    return { donation, total };
+  }
+
+  if (addDonationChk) {
+    addDonationChk.addEventListener("change", () => {
+      if (addDonationChk.checked) {
+        if (donationOptionsContainer) donationOptionsContainer.style.display = "block";
+      } else {
+        if (donationOptionsContainer) donationOptionsContainer.style.display = "none";
+        // Reset selection values
+        selectedChipAmount = 0;
+        customDonationAmount = 0;
+        if (customDonationInput) customDonationInput.value = "";
+        donationChips.forEach(c => c.classList.remove("active"));
+      }
+      calculateTotal();
+    });
+  }
+
+  donationChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      // Clear custom input since chip is clicked
+      if (customDonationInput) {
+        customDonationInput.value = "";
+        customDonationAmount = 0;
+      }
+
+      // Check if already active
+      if (chip.classList.contains("active")) {
+        chip.classList.remove("active");
+        selectedChipAmount = 0;
+      } else {
+        donationChips.forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        selectedChipAmount = parseInt(chip.getAttribute("data-val") || "0", 10);
+      }
+      calculateTotal();
+    });
+  });
+
+  if (customDonationInput) {
+    customDonationInput.addEventListener("input", () => {
+      const val = parseInt(customDonationInput.value, 10);
+      customDonationAmount = isNaN(val) || val < 0 ? 0 : val;
+      
+      // Clear active chips if user enters custom donation
+      if (customDonationAmount > 0) {
+        donationChips.forEach(c => c.classList.remove("active"));
+        selectedChipAmount = 0;
+      }
+      calculateTotal();
+    });
+  }
+
   form.addEventListener("submit", (evt) => {
     evt.preventDefault();
+    calculateTotal(); // Ensure calculation is fresh
     paymentModal.style.display = "flex";
   });
 
@@ -88,6 +178,12 @@ function initMembershipForm() {
         data.paymentScreenshotMimeType = screenshotData.mimeType;
       }
 
+      // Add donation and payment details to the payload
+      const { donation, total } = calculateTotal();
+      data.registrationFee = 100;
+      data.donationAmount = donation;
+      data.totalAmount = total;
+
       const scriptURL = "https://script.google.com/macros/s/AKfycbxzmrf_YzevSkOGDaK7htPHAlIlxp9XOUr6bsVs9W56eOUZoRBOm0Jt9MX2uIuzgIZ8_g/exec";
       
       await fetch(scriptURL, {
@@ -101,7 +197,23 @@ function initMembershipForm() {
       alertBox.querySelector("strong").textContent = "Submission Successful!";
       alertBox.querySelector("span").textContent = "Thank you! Membership registration is complete. Redirecting to WhatsApp group...";
       alertBox.style.display = "flex";
+      
+      // Reset form and modal values
       form.reset();
+      if (addDonationChk) {
+        addDonationChk.checked = false;
+      }
+      if (donationOptionsContainer) {
+        donationOptionsContainer.style.display = "none";
+      }
+      if (customDonationInput) {
+        customDonationInput.value = "";
+      }
+      selectedChipAmount = 0;
+      customDonationAmount = 0;
+      donationChips.forEach(c => c.classList.remove("active"));
+      calculateTotal();
+
       form.scrollIntoView({ behavior: "smooth" });
 
       setTimeout(() => {
