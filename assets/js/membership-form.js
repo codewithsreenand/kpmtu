@@ -85,19 +85,23 @@ function initMembershipForm() {
 
     // Update UPI deep links
     const formattedTotal = parseFloat(total).toFixed(2);
-    const upiQuery = "pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&am=" + formattedTotal + "&cu=INR&tn=Membership%20Fee";
+    const orderId = "TXN" + Date.now() + Math.floor(Math.random() * 1000);
+    const upiQuery = "pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&mc=8699&tr=" + orderId + "&am=" + formattedTotal + "&cu=INR&tn=Membership%20Fee";
+
+    // Set all links to use the standard universal UPI scheme to bypass app-specific signature validation enforcements
+    const universalLink = "upi://pay?" + upiQuery;
 
     if (gpayLink) {
-      gpayLink.href = "tez://upi/pay?" + upiQuery;
+      gpayLink.href = universalLink;
     }
     if (phonepeLink) {
-      phonepeLink.href = "phonepe://pay?" + upiQuery;
+      phonepeLink.href = universalLink;
     }
     if (paytmLink) {
-      paytmLink.href = "paytmmp://pay?" + upiQuery;
+      paytmLink.href = universalLink;
     }
     if (upiPayLink) {
-      upiPayLink.href = "upi://pay?" + upiQuery;
+      upiPayLink.href = universalLink;
     }
 
     return { donation, total };
