@@ -149,8 +149,8 @@
             <!-- Cost Breakdown Section -->
             <div style="background:var(--bg-alt); border-radius:var(--radius); padding:1rem; margin-bottom:1.5rem; text-align:left; border: 1px solid var(--border);">
               <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.95rem;">
-                <span style="font-weight:500;" data-i18n="payment_reg_fee">Registration Fee</span>
-                <span style="font-weight:600; color:var(--primary);">₹100</span>
+                <span style="font-weight:500;" data-i18n="payment_reg_fee">Membership Fee</span>
+                <span style="font-weight:600; color:var(--primary);">₹10</span>
               </div>
               
               <div style="margin-top:0.75rem; border-top:1px dashed var(--border); padding-top:0.75rem;">
@@ -172,7 +172,7 @@
               
               <div style="display:flex; justify-content:space-between; margin-top:0.75rem; border-top:1px solid var(--border); padding-top:0.75rem; font-size:1.1rem; font-weight:700; color:var(--primary);">
                 <span data-i18n="payment_total">Total to Pay</span>
-                <span id="payment-total-amount">₹100</span>
+                <span id="payment-total-amount">₹10</span>
               </div>
             </div>
 
@@ -184,8 +184,18 @@
             
             <p style="font-weight:600; margin-bottom:0.5rem; font-size:1.1rem; user-select:all;">kera8590838@barodampay</p>
             
-            <div style="margin-bottom:1.5rem;">
-              <a id="upi-pay-link" href="upi://pay?pa=kera8590838@barodampay&amp;pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&amp;mc=&amp;tn=Verified%20Merchant&amp;am=100&amp;cu=INR&amp;url=&amp;mode=02&amp;orgid=159012&amp;mid=&amp;msid=&amp;mtid=&amp;sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo" class="btn btn-outline" style="display:inline-block; text-decoration:none; width:100%; max-width:200px;" data-i18n="payment_pay_upi">Pay via UPI App</a>
+            <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.5rem; max-width:280px; margin-left:auto; margin-right:auto;">
+              <!-- Google Pay -->
+              <a id="gpay-link" href="" class="btn" style="background:#4285F4; color:#fff; border:none; text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_gpay">Pay with Google Pay</a>
+              
+              <!-- PhonePe -->
+              <a id="phonepe-link" href="" class="btn" style="background:#5f259f; color:#fff; border:none; text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_phonepe">Pay with PhonePe</a>
+              
+              <!-- Paytm -->
+              <a id="paytm-link" href="" class="btn" style="background:#00baf2; color:#fff; border:none; text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_paytm">Pay with Paytm</a>
+              
+              <!-- Other UPI -->
+              <a id="upi-pay-link" href="" class="btn btn-outline" style="text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_other_upi">Pay via Other UPI App</a>
             </div>
             
             <div style="text-align:left;">

@@ -54,8 +54,13 @@ function initMembershipForm() {
   const donationOptionsContainer = document.getElementById("donation-options-container");
   const customDonationInput = document.getElementById("custom-donation-input");
   const paymentTotalAmount = document.getElementById("payment-total-amount");
-  const upiPayLink = document.getElementById("upi-pay-link");
   const donationChips = document.querySelectorAll(".donation-chip");
+
+  // Payment Deep Links
+  const gpayLink = document.getElementById("gpay-link");
+  const phonepeLink = document.getElementById("phonepe-link");
+  const paytmLink = document.getElementById("paytm-link");
+  const upiPayLink = document.getElementById("upi-pay-link");
 
   let selectedChipAmount = 0;
   let customDonationAmount = 0;
@@ -70,7 +75,7 @@ function initMembershipForm() {
         donation = customDonationAmount;
       }
     }
-    const registrationFee = 100;
+    const registrationFee = 10;
     const total = registrationFee + donation;
 
     // Update UI
@@ -78,10 +83,20 @@ function initMembershipForm() {
       paymentTotalAmount.textContent = `₹${total}`;
     }
 
-    // Update UPI deep link
+    // Update UPI deep links
+    const upiQuery = "pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&mc=&tn=Verified%20Merchant&am=" + total + "&cu=INR&url=&mode=02&orgid=159012&mid=&msid=&mtid=&sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo";
+
+    if (gpayLink) {
+      gpayLink.href = "tez://upi/pay?" + upiQuery;
+    }
+    if (phonepeLink) {
+      phonepeLink.href = "phonepe://pay?" + upiQuery;
+    }
+    if (paytmLink) {
+      paytmLink.href = "paytmmp://pay?" + upiQuery;
+    }
     if (upiPayLink) {
-      const baseUri = "upi://pay?pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&mc=&tn=Verified%20Merchant&am=" + total + "&cu=INR&url=&mode=02&orgid=159012&mid=&msid=&mtid=&sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo";
-      upiPayLink.href = baseUri;
+      upiPayLink.href = "upi://pay?" + upiQuery;
     }
 
     return { donation, total };
@@ -180,7 +195,8 @@ function initMembershipForm() {
 
       // Add donation and payment details to the payload
       const { donation, total } = calculateTotal();
-      data.registrationFee = 100;
+      data.registrationFee = 10;
+      data.membershipFee = 10;
       data.donationAmount = donation;
       data.totalAmount = total;
 

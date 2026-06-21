@@ -858,3 +858,13 @@ section:last-of-type {
   color: #fff !important;
   border-color: var(--primary) !important;
 }
+
+/* APP PAYMENT BUTTON HOVER EFFECTS */
+#gpay-link:hover,
+#phonepe-link:hover,
+#paytm-link:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
