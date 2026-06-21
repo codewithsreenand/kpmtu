@@ -84,7 +84,8 @@ function initMembershipForm() {
     }
 
     // Update UPI deep links
-    const upiQuery = "pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&mc=&tn=Verified%20Merchant&am=" + total + "&cu=INR&url=&mode=02&orgid=159012&mid=&msid=&mtid=&sign=MEYCIQCyuahbB2zJyhrxDsphCTa26+L3voeCIwU5O0qaz2D5xAIhAIaWBJDkZN6yQYK0SIAR24wm4Llriwxey2XKuoYfgCYo";
+    const formattedTotal = parseFloat(total).toFixed(2);
+    const upiQuery = "pa=kera8590838@barodampay&pn=KERALA%20PARAMEDICAL%20TECHNICIANS%20UNION&am=" + formattedTotal + "&cu=INR&tn=Membership%20Fee";
 
     if (gpayLink) {
       gpayLink.href = "tez://upi/pay?" + upiQuery;
