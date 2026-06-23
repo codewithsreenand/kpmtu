@@ -75,7 +75,7 @@ function initMembershipForm() {
         donation = customDonationAmount;
       }
     }
-    const registrationFee = 10;
+    const registrationFee = 100;
     const total = registrationFee + donation;
 
     // Update UI
@@ -90,6 +90,12 @@ function initMembershipForm() {
 
     // Set all links to use the standard universal UPI scheme to bypass app-specific signature validation enforcements
     const universalLink = "upi://pay?" + upiQuery;
+
+    // Dynamically update the QR code image source to embed the exact UPI link and set amount
+    const qrImg = document.getElementById("payment-qr-img");
+    if (qrImg) {
+      qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(universalLink);
+    }
 
     if (gpayLink) {
       gpayLink.href = universalLink;
@@ -200,8 +206,8 @@ function initMembershipForm() {
 
       // Add donation and payment details to the payload
       const { donation, total } = calculateTotal();
-      data.registrationFee = 10;
-      data.membershipFee = 10;
+      data.registrationFee = 100;
+      data.membershipFee = 100;
       data.donationAmount = donation;
       data.totalAmount = total;
 

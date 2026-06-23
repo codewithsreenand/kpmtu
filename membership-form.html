@@ -148,55 +148,19 @@
             
             <!-- Cost Breakdown Section -->
             <div style="background:var(--bg-alt); border-radius:var(--radius); padding:1rem; margin-bottom:1.5rem; text-align:left; border: 1px solid var(--border);">
-              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.95rem;">
-                <span style="font-weight:500;" data-i18n="payment_reg_fee">Membership Fee</span>
-                <span style="font-weight:600; color:var(--primary);">₹10</span>
-              </div>
-              
-              <div style="margin-top:0.75rem; border-top:1px dashed var(--border); padding-top:0.75rem;">
-                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.95rem; font-weight:500; cursor:pointer; margin-bottom:0.5rem;">
-                  <input type="checkbox" id="add-donation-chk" style="width:16px; height:16px; cursor:pointer;" />
-                  <span data-i18n="payment_add_donation">Add a Donation (Optional)</span>
-                </label>
-                
-                <div id="donation-options-container" style="display:none; margin-top:0.5rem; animation: introFadeUp 0.3s ease;">
-                  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom:0.5rem;">
-                    <button type="button" class="donation-chip" data-val="50">+₹50</button>
-                    <button type="button" class="donation-chip" data-val="100">+₹100</button>
-                    <button type="button" class="donation-chip" data-val="200">+₹200</button>
-                    <button type="button" class="donation-chip" data-val="500">+₹500</button>
-                  </div>
-                  <input type="number" id="custom-donation-input" class="input" placeholder="Custom Donation Amount (₹)" min="1" data-i18n="payment_custom_donation" style="padding:0.5rem; font-size:0.9rem; margin-top:0.25rem;" />
-                </div>
-              </div>
-              
-              <div style="display:flex; justify-content:space-between; margin-top:0.75rem; border-top:1px solid var(--border); padding-top:0.75rem; font-size:1.1rem; font-weight:700; color:var(--primary);">
+              <div style="display:flex; justify-content:space-between; font-size:1.1rem; font-weight:700; color:var(--primary);">
                 <span data-i18n="payment_total">Total to Pay</span>
-                <span id="payment-total-amount">₹10</span>
+                <span id="payment-total-amount">₹100</span>
               </div>
             </div>
 
             <p style="color:var(--muted); font-size:0.95rem; margin-bottom:1.5rem;" data-i18n="payment_instruction">Scan this QR code with any UPI app to pay the fee.</p>
             
             <div style="background:#fff; border-radius:12px; padding:1rem; display:inline-block; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-              <img src="assets/images/payment-qr.png" alt="Scan to pay" style="width:200px; height:200px; object-fit:contain; display:block;" />
+              <img id="payment-qr-img" src="assets/images/payment-qr.png" alt="Scan to pay" style="width:200px; height:200px; object-fit:contain; display:block;" />
             </div>
             
-            <p style="font-weight:600; margin-bottom:0.5rem; font-size:1.1rem; user-select:all;">kera8590838@barodampay</p>
-            
-            <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.5rem; max-width:280px; margin-left:auto; margin-right:auto;">
-              <!-- Google Pay -->
-              <a id="gpay-link" href="" class="btn" style="background:#4285F4; color:#fff; border:none; text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_gpay">Pay with Google Pay</a>
-              
-              <!-- PhonePe -->
-              <a id="phonepe-link" href="" class="btn" style="background:#5f259f; color:#fff; border:none; text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_phonepe">Pay with PhonePe</a>
-              
-              <!-- Paytm -->
-              <a id="paytm-link" href="" class="btn" style="background:#00baf2; color:#fff; border:none; text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_paytm">Pay with Paytm</a>
-              
-              <!-- Other UPI -->
-              <a id="upi-pay-link" href="" class="btn btn-outline" style="text-transform:none; font-size:0.95rem; font-weight:600; padding:0.6rem; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.5rem;" data-i18n="payment_pay_other_upi">Pay via Other UPI App</a>
-            </div>
+            <p style="font-weight:600; margin-bottom:1.5rem; font-size:1.1rem; user-select:all;">kera8590838@barodampay</p>
             
             <div style="text-align:left;">
               <label for="paymentScreenshot" style="display:block; font-weight:500; margin-bottom:0.5rem; font-size:0.95rem;" data-i18n="payment_upload_label">Upload Payment Screenshot</label>
